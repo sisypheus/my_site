@@ -47,7 +47,7 @@ const Home: NextPage = () => {
             </p>
           </div>
           <Image
-            className="h-32 w-32 overflow-hidden rounded-full"
+            className="h-32 w-32 overflow-hidden rounded-full border-2 border-white"
             src="/me.jpg"
             alt="Picture of me"
             width={400}

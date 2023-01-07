@@ -49,7 +49,7 @@ const ActiveLink = ({
   ]);
 
   return (
-    <Link className={computedClassName} {...props}>
+    <Link className={computedClassName} {...props} href={props.href ?? ''}>
       {children}
     </Link>
   );

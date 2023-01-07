@@ -49,7 +49,11 @@ const Menu: NextPage = () => {
               <ActiveLink href="/contact" activeClassName="text-gray-300">
                 <p className="font-light  hover:underline">Contact</p>
               </ActiveLink>
-              <a target="_blank" rel="noreferrer" href="https://blog.theopoette.me">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://blog.theopoette.me"
+              >
                 <p className="font-light  hover:underline">Blog</p>
               </a>
               <a
@@ -67,18 +71,18 @@ const Menu: NextPage = () => {
         </div>
 
         {/* desktop */}
-        <div className="ml-6 hidden items-center justify-center space-x-6 py-2 md:flex">
+        <div className="ml-6 hidden items-center justify-center space-x-2 py-2 md:flex">
           <ActiveLink
             href="/projects"
-            activeClassName="text-gray-900 font-semibold bg-blue-300 px-4 py-2 rounded"
-            className="font-light underline-offset-2 hover:underline"
+            activeClassName="text-gray-900 font-semibold bg-blue-300 py-2 rounded"
+            className="px-4 font-light underline-offset-2 hover:underline"
           >
             Projects
           </ActiveLink>
           <ActiveLink
             href="/work"
-            activeClassName="text-gray-900 font-semibold bg-blue-300 px-4 py-2 rounded"
-            className="font-light underline-offset-2 hover:underline"
+            activeClassName="text-gray-900 font-semibold bg-blue-300 py-2 rounded"
+            className="px-4 font-light underline-offset-2 hover:underline"
           >
             Work
           </ActiveLink>
@@ -88,14 +92,14 @@ const Menu: NextPage = () => {
             </p>
           </ActiveLink>
           <a target="_blank" rel="noreferrer" href="https://blog.theopoette.me">
-            <p className="font-light  underline-offset-2 hover:underline">
+            <p className="px-4  font-light underline-offset-2 hover:underline">
               Blog
             </p>
           </a>
           <a
             rel="noreferrer"
             href="https://github.com/sisypheus"
-            className="ml-6 flex items-center space-x-1 underline-offset-2 hover:underline"
+            className="ml-6 flex items-center space-x-1 px-4 underline-offset-2 hover:underline"
           >
             <div className="fill-current text-white">
               <Github />
