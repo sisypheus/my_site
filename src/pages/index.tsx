@@ -2,9 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import FadeIn from "./components/FadeIn";
-import Footer from "./components/Footer";
 
 const Home: NextPage = () => {
   const age = () => {
@@ -26,7 +24,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <FadeIn> */}
+      <FadeIn>
         <div className="mt-8 flex w-full items-center justify-center rounded-lg bg-blue-200/70 px-8 py-4">
           <p className="text-white opacity-100">
             Hello, I'm Theo, a software engineer based in France 🇫🇷 !
@@ -85,7 +83,7 @@ const Home: NextPage = () => {
             Work
           </Link>
         </div>
-      {/* </FadeIn> */}
+      </FadeIn>
     </>
   );
 };
