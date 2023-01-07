@@ -49,10 +49,11 @@ const Menu: NextPage = () => {
               <ActiveLink href="/contact" activeClassName="text-gray-300">
                 <p className="font-light  hover:underline">Contact</p>
               </ActiveLink>
-              <a target="_blank" href="https://blog.theopoette.me">
+              <a target="_blank" rel="noreferrer" href="https://blog.theopoette.me">
                 <p className="font-light  hover:underline">Blog</p>
               </a>
               <a
+                rel="noreferrer"
                 href="https://github.com/sisypheus"
                 className="p-auto m-auto ml-6 flex space-x-1 hover:underline"
               >
@@ -86,12 +87,13 @@ const Menu: NextPage = () => {
               Contact
             </p>
           </ActiveLink>
-          <a target="_blank" href="https://blog.theopoette.me">
+          <a target="_blank" rel="noreferrer" href="https://blog.theopoette.me">
             <p className="font-light  underline-offset-2 hover:underline">
               Blog
             </p>
           </a>
           <a
+            rel="noreferrer"
             href="https://github.com/sisypheus"
             className="ml-6 flex items-center space-x-1 underline-offset-2 hover:underline"
           >
