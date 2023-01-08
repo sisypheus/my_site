@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
 import FadeIn from "./components/FadeIn";
+import Link from "next/link";
 
 const Work: NextPage = () => {
   return (
@@ -14,13 +15,13 @@ const Work: NextPage = () => {
       <FadeIn>
         <div className="container mx-auto h-full w-full">
           <div className="wrap relative h-full overflow-hidden p-6 py-8">
-            <div className="border-2-2 absolute left-1/2 h-full border border-gray-700 border-opacity-20"></div>
+            <div className="border-2-2 absolute left-1/2 h-full border border-gray-500 border-opacity-20"></div>
             <div className="left-timeline mb-8 flex w-full items-center justify-between">
-              <div className="order-1 flex w-5/12 flex-col items-center justify-center rounded-lg bg-blue-200/70 p-4">
+              <div className="order-1 flex w-5/12 flex-col items-center justify-center space-y-1 rounded-lg bg-blue-200/70 p-4">
                 <Image
-                  src="/me.jpg"
+                  src="/nextraining.png"
                   alt="Picture of me"
-                  className="h-24 w-24 "
+                  className="h-12 w-24 "
                   width={400}
                   height={400}
                 />
@@ -41,7 +42,7 @@ const Work: NextPage = () => {
               </div>
             </div>
 
-            <div className="left-timeline mb-8 flex w-full items-center justify-between">
+            <div className="left-timeline mb-8 mt-16 flex w-full items-center justify-between">
               <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
                 <p className="text-sm leading-snug tracking-wide text-gray-200">
                   yes i did some things whatever
@@ -52,38 +53,38 @@ const Work: NextPage = () => {
                   2021
                 </h1>
               </div>
-              <div className="order-1 flex w-5/12 flex-col items-center justify-center rounded-lg bg-blue-200/70 p-4">
+              <div className="order-1 flex w-5/12 flex-col items-center justify-center space-y-1 rounded-lg bg-blue-200/70 p-4">
                 <Image
-                  src="/me.jpg"
+                  src="/bouge.png"
                   alt="Picture of me"
-                  className="h-24 w-24 "
+                  className="h-12 w-24"
                   width={400}
                   height={400}
                 />
-                <p className="text-xl font-bold text-gray-900">Nextraining</p>
+                <p className="text-xl font-bold text-gray-900">Bouge</p>
                 <p className="text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
               </div>
             </div>
 
-            <div className="left-timeline mb-8 flex w-full items-center justify-between">
-              <div className="order-1 flex w-5/12 flex-col items-center justify-center rounded-lg bg-blue-200/70 p-4">
+            <div className="left-timeline mb-8 mt-16 flex w-full items-center justify-between">
+              <div className="order-1 flex w-5/12 flex-col items-center justify-center space-y-1 rounded-lg bg-blue-200/70 p-4">
                 <Image
-                  src="/me.jpg"
+                  src="/lama.png"
                   alt="Picture of me"
-                  className="h-24 w-24 "
+                  className="h-12 w-12"
                   width={400}
                   height={400}
                 />
-                <p className="text-xl font-bold text-gray-900">Nextraining</p>
+                <p className="text-xl font-bold text-gray-900">Lamafactory</p>
                 <p className="text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
                 <h1 className="mx-auto text-lg font-semibold text-white">
-                  2020
+                  2022
                 </h1>
               </div>
               <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
@@ -93,6 +94,16 @@ const Work: NextPage = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="mx-auto mt-8 flex w-fit flex-col items-center justify-center rounded-lg bg-gray-500 p-6">
+          <p className="text-lg font-semibold text-white">Present</p>
+          <p className="text-white">I'm open to new opportunities !</p>
+          <Link
+            className="mt-2 rounded-lg bg-blue-300 px-4 py-2 shadow"
+            href="/contact"
+          >
+            Contact me
+          </Link>
         </div>
       </FadeIn>
     </>

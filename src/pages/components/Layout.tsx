@@ -8,7 +8,7 @@ const Layout: NextPage = ({ children }: any) => {
       <div className="mx-auto max-w-2xl">
         <div className="mx-auto flex min-h-screen flex-col px-4">
           <Menu />
-          <div className="h-80 bg-gray-500">test</div>
+          <div className="h-80">test</div>
           <div className="flex-1">{children}</div>
           <Footer />
         </div>
