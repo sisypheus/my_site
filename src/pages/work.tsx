@@ -13,10 +13,10 @@ const Work: NextPage = () => {
       </Head>
       <FadeIn>
         <div className="container mx-auto h-full w-full">
-          <div className="wrap relative h-full overflow-hidden p-10">
+          <div className="wrap relative h-full overflow-hidden p-6 py-8">
             <div className="border-2-2 absolute left-1/2 h-full border border-gray-700 border-opacity-20"></div>
             <div className="left-timeline mb-8 flex w-full items-center justify-between">
-              <div className="order-1 flex w-5/12 flex-col items-center justify-center rounded-lg bg-blue-300 px-4 py-2">
+              <div className="order-1 flex w-5/12 flex-col items-center justify-center rounded-lg bg-blue-200/70 p-4">
                 <Image
                   src="/me.jpg"
                   alt="Picture of me"
@@ -24,10 +24,8 @@ const Work: NextPage = () => {
                   width={400}
                   height={400}
                 />
-                <p className="mb-1 text-xl font-bold text-gray-800">
-                  Nextraining
-                </p>
-                <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                <p className="text-xl font-bold text-gray-900">Nextraining</p>
+                <p className="text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
               </div>
@@ -36,16 +34,16 @@ const Work: NextPage = () => {
                   2020
                 </h1>
               </div>
-              <div className="order-1 w-5/12 rounded-lg bg-gray-400 px-6 py-4 shadow-xl">
-                <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+              <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
+                <p className="text-sm leading-snug tracking-wide text-gray-200">
                   yes i did some things whatever
                 </p>
               </div>
             </div>
 
             <div className="left-timeline mb-8 flex w-full items-center justify-between">
-              <div className="order-1 w-5/12 rounded-lg bg-gray-400 px-6 py-4 shadow-xl">
-                <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+              <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
+                <p className="text-sm leading-snug tracking-wide text-gray-200">
                   yes i did some things whatever
                 </p>
               </div>
@@ -54,7 +52,7 @@ const Work: NextPage = () => {
                   2021
                 </h1>
               </div>
-              <div className="order-1 flex w-5/12 flex-col items-center justify-center rounded-lg bg-blue-300 px-4 py-2">
+              <div className="order-1 flex w-5/12 flex-col items-center justify-center rounded-lg bg-blue-200/70 p-4">
                 <Image
                   src="/me.jpg"
                   alt="Picture of me"
@@ -62,17 +60,15 @@ const Work: NextPage = () => {
                   width={400}
                   height={400}
                 />
-                <p className="mb-1 text-xl font-bold text-gray-800">
-                  Nextraining
-                </p>
-                <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                <p className="text-xl font-bold text-gray-900">Nextraining</p>
+                <p className="text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
               </div>
             </div>
 
             <div className="left-timeline mb-8 flex w-full items-center justify-between">
-              <div className="order-1 flex w-5/12 flex-col items-center justify-center rounded-lg bg-blue-300 px-4 py-2">
+              <div className="order-1 flex w-5/12 flex-col items-center justify-center rounded-lg bg-blue-200/70 p-4">
                 <Image
                   src="/me.jpg"
                   alt="Picture of me"
@@ -80,20 +76,18 @@ const Work: NextPage = () => {
                   width={400}
                   height={400}
                 />
-                <p className="mb-1 text-xl font-bold text-gray-800">
-                  Nextraining
-                </p>
-                <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                <p className="text-xl font-bold text-gray-900">Nextraining</p>
+                <p className="text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
                 <h1 className="mx-auto text-lg font-semibold text-white">
-                  2022
+                  2020
                 </h1>
               </div>
-              <div className="order-1 w-5/12 rounded-lg bg-gray-400 px-6 py-4 shadow-xl">
-                <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+              <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
+                <p className="text-sm leading-snug tracking-wide text-gray-200">
                   yes i did some things whatever
                 </p>
               </div>
