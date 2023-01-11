@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 import React, { useState } from "react";
 import ActiveLink from "./ActiveLink";
+import FadeIn from "./FadeIn";
 import Github from "./Github";
 import MenuIcon from "./MenuIcon";
 
@@ -13,7 +14,7 @@ const Menu: NextPage = () => {
   };
 
   return (
-    <div className="sticky">
+    <div className="sticky top-0 backdrop-blur-md z-10 w-full">
       <div className="flex items-center justify-between text-white">
         <div className="flex items-center justify-center py-4">
           <Link href="/">
@@ -33,6 +34,8 @@ const Menu: NextPage = () => {
           </button>
 
           {isOpen && (
+            <FadeIn>
+
             <div className="absolute top-0 right-0 mt-14 flex w-48 flex-col space-y-2 rounded-lg bg-slate-700 py-2">
               <ActiveLink
                 href="/projects"
@@ -70,6 +73,7 @@ const Menu: NextPage = () => {
                 Github
               </a>
             </div>
+            </FadeIn>
           )}
         </div>
 

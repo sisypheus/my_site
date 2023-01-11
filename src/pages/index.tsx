@@ -26,22 +26,22 @@ const Home: NextPage = () => {
 
       <FadeIn>
         <div className="mt-8 flex w-full items-center justify-center rounded-lg bg-blue-200/70 px-8 py-4">
-          <p className="text-white opacity-100">
+          <p className="text-center text-white opacity-100">
             Hello, I'm Theo, a software engineer based in France 🇫🇷 !
           </p>
         </div>
 
-        <div className="mt-8 flex w-full items-center justify-between">
-          <div>
-            <p className="text-3xl font-semibold tracking-wide text-white">
+        <div className="mt-8 flex w-full flex-col items-center justify-center sm:flex-row sm:justify-between">
+          <div className="flex-col">
+            <p className="text-center text-3xl font-semibold tracking-wide text-white sm:text-left">
               Theo Poette
             </p>
-            <p className="text-lg font-light tracking-wide text-white">
+            <p className="text-center text-lg font-light tracking-wide text-white sm:text-left">
               Full-stack software engineer
             </p>
           </div>
           <Image
-            className="h-32 w-32 overflow-hidden rounded-full border-2 border-white"
+            className="mx-auto mt-4 h-32 w-32 overflow-hidden rounded-full border-2 border-white sm:m-0"
             src="/me.jpg"
             alt="Picture of me"
             width={400}
