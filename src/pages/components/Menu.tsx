@@ -14,7 +14,7 @@ const Menu: NextPage = () => {
   };
 
   return (
-    <div className="sticky top-0 backdrop-blur-md z-10 w-full">
+    <div className="sticky top-0 z-10 w-full backdrop-blur-md">
       <div className="flex items-center justify-between text-white">
         <div className="flex items-center justify-center py-4">
           <Link href="/">
@@ -35,44 +35,43 @@ const Menu: NextPage = () => {
 
           {isOpen && (
             <FadeIn>
-
-            <div className="absolute top-0 right-0 mt-14 flex w-48 flex-col space-y-2 rounded-lg bg-slate-700 py-2">
-              <ActiveLink
-                href="/projects"
-                activeClassName="text-blue-300"
-                className="pl-4 hover:underline"
-              >
-                Projects
-              </ActiveLink>
-              <ActiveLink
-                href="/work"
-                activeClassName="text-blue-300"
-                className="pl-4 hover:underline"
-              >
-                Work
-              </ActiveLink>
-              <ActiveLink
-                href="/contact"
-                activeClassName="text-blue-300"
-                className="pl-4 hover:underline"
-              >
-                Contact
-              </ActiveLink>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://blog.theopoette.me"
-              >
-                <p className="pl-4 hover:underline">Blog</p>
-              </a>
-              <a
-                rel="noreferrer"
-                href="https://github.com/sisypheus"
-                className="flex items-center space-x-1 pl-4 hover:underline"
-              >
-                Github
-              </a>
-            </div>
+              <div className="absolute top-0 right-0 mt-6 flex w-48 flex-col space-y-2 rounded-lg bg-slate-700 py-2">
+                <ActiveLink
+                  href="/projects"
+                  activeClassName="text-blue-300"
+                  className="pl-4 hover:underline"
+                >
+                  Projects
+                </ActiveLink>
+                <ActiveLink
+                  href="/work"
+                  activeClassName="text-blue-300"
+                  className="pl-4 hover:underline"
+                >
+                  Work
+                </ActiveLink>
+                <ActiveLink
+                  href="/contact"
+                  activeClassName="text-blue-300"
+                  className="pl-4 hover:underline"
+                >
+                  Contact
+                </ActiveLink>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://blog.theopoette.me"
+                >
+                  <p className="pl-4 hover:underline">Blog</p>
+                </a>
+                <a
+                  rel="noreferrer"
+                  href="https://github.com/sisypheus"
+                  className="flex items-center space-x-1 pl-4 hover:underline"
+                >
+                  Github
+                </a>
+              </div>
             </FadeIn>
           )}
         </div>
