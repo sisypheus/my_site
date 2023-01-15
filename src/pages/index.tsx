@@ -2,9 +2,21 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import Circle from "./components/Circle";
 import FadeIn from "./components/FadeIn";
+import RoundIcon from "./components/RoundIcon";
 
 const Home: NextPage = () => {
+  const animRef = useRef<HTMLDivElement>(null);
+  const [circlesMaxSize, setCirclesMaxSize] = useState(0);
+
+  useEffect(() => {
+    if (!animRef.current) return;
+
+    setCirclesMaxSize(animRef.current.clientWidth);
+  }, [animRef]);
+
   const age = () => {
     const today = new Date();
     const birthDate = new Date("2002-05-01");
@@ -70,6 +82,32 @@ const Home: NextPage = () => {
             projects, both personal and professional, and I'm always open to new
             opportunities to grow and learn.
           </p>
+        </div>
+
+        <div
+          ref={animRef}
+          className="relative mt-4"
+          style={{ height: circlesMaxSize * 0.7 }}
+        >
+          <Circle
+            icons={["cpp.png", "rust.png", "go.png"]}
+            size={(circlesMaxSize ?? 0) * 0.2}
+          />
+          <Circle
+            icons={["js.png", "ts.png", "node.png", "react.png", "next.png"]}
+            size={(circlesMaxSize ?? 0) * 0.45}
+          />
+          <Circle
+            icons={[
+              "postgres.png",
+              "linux.png",
+              "docker.png",
+              "github.png",
+              "aws.png",
+              "nest.png",
+            ]}
+            size={(circlesMaxSize ?? 0) * 0.7}
+          />
         </div>
 
         <div className="mt-8 flex items-center justify-center space-x-4">
