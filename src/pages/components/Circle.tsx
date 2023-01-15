@@ -3,11 +3,12 @@ import RoundIcon from "./RoundIcon";
 
 interface Props {
   icons: string[];
-  size: any;
+  size: number;
 }
 
 const Circle = ({ icons, size }: Props) => {
-  size = size / 2;
+  if (!icons) return null;
+  size = (size ?? 1) / 2;
   const divs = [];
   for (let i = 0; i < icons.length; i++) {
     const angle = (i / icons.length) * 2 * Math.PI;
