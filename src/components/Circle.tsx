@@ -1,5 +1,4 @@
 import { useSpring, animated } from "@react-spring/web";
-import { info } from "console";
 import React from "react";
 import RoundIcon from "./RoundIcon";
 
@@ -22,19 +21,19 @@ const Circle = ({ icons, size, speed, direction }: Props) => {
     loop: true,
   });
 
+  const counter = useSpring({
+    from: { transform: "rotate(0deg)" },
+    to: {
+      transform: direction === "cw" ? "rotate(-360deg)" : "rotate(360deg)",
+    },
+    config: { duration },
+    loop: true,
+  });
+
   for (let i = 0; i < icons.length; i++) {
     const angle = (i / icons.length) * 2 * Math.PI;
     const x = size * Math.cos(angle);
     const y = size * Math.sin(angle);
-
-    const counter = useSpring({
-      from: { transform: direction === "cw" ? "rotate(0deg)" : "rotate(0deg)" },
-      to: {
-        transform: direction === "cw" ? "rotate(-360deg)" : "rotate(360deg)",
-      },
-      config: { duration },
-      loop: true,
-    });
 
     divs.push(
       <div

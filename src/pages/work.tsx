@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
-import FadeIn from "./components/FadeIn";
+import FadeIn from "../components/FadeIn";
 import Link from "next/link";
 
 const Work: NextPage = () => {
