@@ -11,7 +11,6 @@ interface Props {
 }
 
 const Circle = ({ icons, size, speed, direction }: Props) => {
-  if (!icons) return null;
   size = (size ?? 1) / 2;
   const divs = [];
   const duration = 40000 / speed;

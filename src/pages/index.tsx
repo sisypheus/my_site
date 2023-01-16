@@ -3,9 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import Circle from "./components/Circle";
-import FadeIn from "./components/FadeIn";
-import RoundIcon from "./components/RoundIcon";
+import Circle from "../components/Circle";
+import FadeIn from "../components/FadeIn";
 
 const Home: NextPage = () => {
   const animRef = useRef<HTMLDivElement>(null);
