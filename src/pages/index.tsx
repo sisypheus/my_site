@@ -86,29 +86,50 @@ const Home: NextPage = () => {
 
         <div
           ref={animRef}
-          className="relative mt-4"
-          style={{ height: circlesMaxSize * 0.7 }}
+          className="relative mt-8 flex flex-col"
+          /* style={{ height: circlesMaxSize * 0.7 }} */
+          id="skills"
         >
-          <Circle
-            icons={["cpp.png", "rust.png", "go.png"]}
-            size={(circlesMaxSize ?? 0) * 0.2}
-          />
-          <Circle
-            icons={["js.png", "ts.png", "node.png", "react.png", "next.png"]}
-            size={(circlesMaxSize ?? 0) * 0.45}
-          />
-          <Circle
-            icons={[
-              "postgres.png",
-              "linux.png",
-              "docker.png",
-              "github.png",
-              "aws.png",
-              "nest.png",
-            ]}
-            size={(circlesMaxSize ?? 0) * 0.7}
-          />
+          <p className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
+            Skills
+          </p>
+
+          <div style={{ height: circlesMaxSize * 0.85 }}>
+            <Circle
+              icons={["cpp.png", "rust.png", "go.png"]}
+              size={(circlesMaxSize ?? 0) * 0.2}
+              speed={5}
+              direction="cw"
+            />
+            <Circle
+              icons={["js.png", "ts.png", "node.png", "react.png", "next.png"]}
+              size={(circlesMaxSize ?? 0) * 0.45}
+              speed={2}
+              direction="ccw"
+            />
+            <Circle
+              icons={[
+                "postgres.png",
+                "linux.png",
+                "docker.png",
+                "github.png",
+                "aws.png",
+                "nest.png",
+                "do.png",
+              ]}
+              speed={1}
+              size={(circlesMaxSize ?? 0) * 0.7}
+              direction="cw"
+            />
+          </div>
         </div>
+        <p className="text-white">
+          I am focused on the JavaScript ecosystem and have experience with
+          React, Next.js, Node.js, Nest.js, and PostgreSQL. I am also familiar
+          with Docker, Github, and cloud platforms like AWS and DigitalOcean. I
+          work primarily on Linux and am always looking to expand my skillset.
+          I'm mainly in backend development, and I'm learning Rust and Go.
+        </p>
 
         <div className="mt-8 flex items-center justify-center space-x-4">
           <Link
