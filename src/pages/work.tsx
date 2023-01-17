@@ -14,7 +14,7 @@ const Work: NextPage = () => {
       </Head>
       <FadeIn>
         <div className="container mx-auto h-full w-full">
-          <div className="wrap relative h-full overflow-hidden p-6 py-8">
+          <div className="wrap relative h-full overflow-hidden p-1 py-8 sm:p-6">
             <div className="border-2-2 absolute left-1/2 h-full border border-gray-500 border-opacity-20"></div>
             <div className="left-timeline mb-8 flex w-full items-center justify-between">
               <div className="order-1 flex w-5/12 flex-col items-center justify-center space-y-1 rounded-lg bg-blue-200/70 p-4">
@@ -25,13 +25,15 @@ const Work: NextPage = () => {
                   width={400}
                   height={400}
                 />
-                <p className="text-xl font-bold text-gray-900">Nextraining</p>
-                <p className="text-sm font-semibold leading-snug tracking-wide text-gray-900">
+                <p className="text-lg font-bold text-gray-900 sm:text-xl">
+                  Nextraining
+                </p>
+                <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
-                <h1 className="mx-auto text-lg font-semibold text-white">
+                <h1 className="mx-auto text-sm font-semibold text-white sm:text-lg">
                   2020
                 </h1>
               </div>
@@ -49,7 +51,7 @@ const Work: NextPage = () => {
                 </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
-                <h1 className="mx-auto text-lg font-semibold text-white">
+                <h1 className="mx-auto text-sm font-semibold text-white sm:text-lg">
                   2021
                 </h1>
               </div>
@@ -57,12 +59,14 @@ const Work: NextPage = () => {
                 <Image
                   src="/bouge.png"
                   alt="Picture of me"
-                  className="h-12 w-24"
-                  width={400}
+                  className="h-12 w-32"
+                  width={600}
                   height={400}
                 />
-                <p className="text-xl font-bold text-gray-900">Bouge</p>
-                <p className="text-sm font-semibold leading-snug tracking-wide text-gray-900">
+                <p className="text-lg font-bold text-gray-900 sm:text-xl">
+                  Bouge
+                </p>
+                <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
               </div>
@@ -77,13 +81,15 @@ const Work: NextPage = () => {
                   width={400}
                   height={400}
                 />
-                <p className="text-xl font-bold text-gray-900">Lamafactory</p>
-                <p className="text-sm font-semibold leading-snug tracking-wide text-gray-900">
+                <p className="text-lg font-bold text-gray-900 sm:text-xl">
+                  Lamafactory
+                </p>
+                <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
-                <h1 className="mx-auto text-lg font-semibold text-white">
+                <h1 className="mx-auto text-sm font-semibold text-white sm:text-lg">
                   2022
                 </h1>
               </div>

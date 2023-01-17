@@ -14,7 +14,7 @@ const Menu: NextPage = () => {
   };
 
   return (
-    <div className="sticky top-0 z-10 w-full backdrop-blur-md">
+    <div className="sticky top-0 z-10 w-full backdrop-blur-md px-4">
       <div className="flex items-center justify-between text-white">
         <div className="flex items-center justify-center py-4">
           <Link href="/">
