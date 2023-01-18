@@ -30,13 +30,31 @@ const ProjectShowcase = ({
           alt={name}
           width={400}
           height={400}
-          className="rounded-xl border border-gray-600 shadow-lg hover:blur-sm"
+          className={`rounded-xl border border-gray-600 shadow-lg ${
+            isHovered ? "blur-sm" : ""
+          }`}
         />
         {isHovered && (
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="flex items-center justify-center space-x-4">
-              <button onClick={() => console.log("tes")} className="">test</button>
-              <button className="">test</button>
+            <div className="flex w-full items-center justify-center space-x-4">
+              <a
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg bg-blue-400 px-4 py-2 text-white"
+              >
+                Code
+              </a>
+              {website && (
+                <a
+                  href={website}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg bg-gray-400 px-4 py-2 text-white"
+                >
+                  Live
+                </a>
+              )}
             </div>
           </div>
         )}
