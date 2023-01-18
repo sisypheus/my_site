@@ -31,6 +31,9 @@ const Work: NextPage = () => {
                 <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
+                <p className="text-center text-xs font-semibold leading-snug tracking-wide text-gray-900">
+                  (6 months)
+                </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
                 <h1 className="mx-auto text-sm font-semibold text-white sm:text-lg">
@@ -38,17 +41,27 @@ const Work: NextPage = () => {
                 </h1>
               </div>
               <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
-                <p className="text-sm leading-snug tracking-wide text-gray-200">
-                  yes i did some things whatever
-                </p>
+                <div>
+                  <p className="text-sm font-semibold leading-snug tracking-wide text-white">
+                    Javascript, PHP, MySQL
+                  </p>
+                  <p className="text-sm leading-snug tracking-wide text-gray-300">
+                    Yes i did some things whatever
+                  </p>
+                </div>
               </div>
             </div>
 
             <div className="left-timeline mb-8 mt-16 flex w-full items-center justify-between">
               <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
-                <p className="text-sm leading-snug tracking-wide text-gray-200">
-                  yes i did some things whatever
-                </p>
+                <div>
+                  <p className="text-sm font-semibold leading-snug tracking-wide text-white">
+                    React, Typescript, AWS, Node, Postgres, Express
+                  </p>
+                  <p className="text-sm leading-snug tracking-wide text-gray-300">
+                    Yes i did some things whatever
+                  </p>
+                </div>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
                 <h1 className="mx-auto text-sm font-semibold text-white sm:text-lg">
@@ -69,6 +82,9 @@ const Work: NextPage = () => {
                 <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
+                <p className="text-center text-xs font-semibold leading-snug tracking-wide text-gray-900">
+                  (6 months)
+                </p>
               </div>
             </div>
 
@@ -87,6 +103,9 @@ const Work: NextPage = () => {
                 <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
                   Full-stack engineer
                 </p>
+                <p className="text-center text-xs font-semibold leading-snug tracking-wide text-gray-900">
+                  (5 months)
+                </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
                 <h1 className="mx-auto text-sm font-semibold text-white sm:text-lg">
@@ -94,15 +113,20 @@ const Work: NextPage = () => {
                 </h1>
               </div>
               <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
-                <p className="text-sm leading-snug tracking-wide text-gray-200">
-                  yes i did some things whatever
-                </p>
+                <div>
+                  <p className="text-sm font-semibold leading-snug tracking-wide text-white">
+                    React, Typescript, AWS, Node, MongoDB, Express
+                  </p>
+                  <p className="text-sm leading-snug tracking-wide text-gray-200">
+                    Yes i did some things whatever
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-8 flex w-fit flex-col items-center justify-center rounded-lg bg-gray-500 p-6">
-          <p className="text-lg font-semibold text-white">Present</p>
+        <div className="mx-auto mt-8 flex w-fit flex-col items-center justify-center rounded-lg p-6">
+          <p className="text-lg font-semibold text-white">Now</p>
           <p className="text-white">I'm open to new opportunities !</p>
           <Link
             className="mt-2 rounded-lg bg-blue-300 px-4 py-2 shadow"

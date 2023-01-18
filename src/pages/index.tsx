@@ -123,11 +123,12 @@ const Home: NextPage = () => {
           </div>
         </div>
         <p className="text-white">
-          I am focused on the JavaScript ecosystem and have experience with
-          React, Next.js, Node.js, Nest.js, and PostgreSQL. I am also familiar
-          with Docker, Github, and cloud platforms like AWS and DigitalOcean. I
-          work primarily on Linux and am always looking to expand my skillset.
-          I'm mainly in backend development, and I'm learning Rust and Go.
+          I am mainly working in the JavaScript (Typescript) ecosystem and have
+          experience with React, Next.js, Node.js, Nest.js, and PostgreSQL. I am
+          also familiar with Docker, Github, and cloud platforms like AWS and
+          DigitalOcean. I work primarily on Linux and am always looking to
+          expand my skillset. I prefer backend development, and I'm learning
+          Rust and Go.
         </p>
 
         <div className="mt-8 flex items-center justify-center space-x-4">

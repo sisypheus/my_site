@@ -14,7 +14,7 @@ const Menu: NextPage = () => {
   };
 
   return (
-    <div className="sticky top-0 z-10 w-full backdrop-blur-md px-4">
+    <div className="sticky top-0 z-10 w-full px-4 backdrop-blur-md">
       <div className="flex items-center justify-between text-white">
         <div className="flex items-center justify-center py-4">
           <Link href="/">
@@ -92,7 +92,10 @@ const Menu: NextPage = () => {
           >
             <p>Work</p>
           </ActiveLink>
-          <ActiveLink href="/contact" activeClassName="text-gray-300">
+          <ActiveLink
+            href="/contact"
+            activeClassName="text-gray-900 font-semibold bg-blue-300 py-2 rounded"
+          >
             <p className="px-4 font-light  underline-offset-2 hover:underline">
               Contact
             </p>
