@@ -30,8 +30,8 @@ const ProjectShowcase = ({
           alt={name}
           width={400}
           height={400}
-          className={`rounded-xl border border-gray-600 shadow-lg ${
-            isHovered ? "blur-sm" : ""
+          className={`h-44 w-96 rounded-xl border border-gray-600 shadow-lg transition-all duration-200 ${
+            isHovered ? "blur-xs" : ""
           }`}
         />
         {isHovered && (

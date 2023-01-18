@@ -61,9 +61,9 @@ const Home: NextPage = () => {
         </div>
 
         <div className="mt-8">
-          <p className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
+          <h1 className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
             About me
-          </p>
+          </h1>
           <p className="mt-2 font-light text-white">
             <span className="ml-4" />
             I'm {age()}, and I'm a french computer science student that
