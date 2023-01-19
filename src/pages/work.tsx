@@ -36,11 +36,11 @@ const Work: NextPage = () => {
                 </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
-                <h1 className="mx-auto text-sm font-semibold text-white sm:text-lg">
+                <h1 className="mx-auto text-xs font-semibold text-white sm:text-lg">
                   2020
                 </h1>
               </div>
-              <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
+              <div className="order-1 w-5/12 rounded-lg bg-gray-600 p-4 shadow-xl">
                 <div>
                   <p className="text-sm font-semibold leading-snug tracking-wide text-white">
                     Javascript, PHP, MySQL
@@ -53,7 +53,7 @@ const Work: NextPage = () => {
             </div>
 
             <div className="left-timeline mb-8 mt-16 flex w-full items-center justify-between">
-              <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
+              <div className="order-1 w-5/12 rounded-lg bg-gray-600 p-4 shadow-xl">
                 <div>
                   <p className="text-sm font-semibold leading-snug tracking-wide text-white">
                     React, Typescript, AWS, Node, Postgres, Express
@@ -64,7 +64,7 @@ const Work: NextPage = () => {
                 </div>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
-                <h1 className="mx-auto text-sm font-semibold text-white sm:text-lg">
+                <h1 className="mx-auto text-xs font-semibold text-white sm:text-lg">
                   2021
                 </h1>
               </div>
@@ -108,11 +108,11 @@ const Work: NextPage = () => {
                 </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
-                <h1 className="mx-auto text-sm font-semibold text-white sm:text-lg">
+                <h1 className="mx-auto text-xs font-semibold text-white sm:text-lg">
                   2022
                 </h1>
               </div>
-              <div className="order-1 w-5/12 rounded-lg bg-gray-600 px-6 py-4 shadow-xl">
+              <div className="order-1 w-5/12 rounded-lg bg-gray-600 p-4 shadow-xl">
                 <div>
                   <p className="text-sm font-semibold leading-snug tracking-wide text-white">
                     React, Typescript, AWS, Node, MongoDB, Express
