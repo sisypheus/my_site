@@ -1,20 +1,29 @@
 import { useForm } from "react-hook-form";
-import * as emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRef } from "react";
 
-const ContactForm = () => {
+interface Props {
+  setSuccess: (value: string) => void;
+  setError: (value: string) => void;
+}
+
+const ContactForm = ({ setSuccess, setError }: Props) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const captchaRef = useRef<any>(null);
 
   const submit = (data: any) => {
-    console.log(data);
+    if (!captchaRef?.current?.getValue()) {
+      setError("Please verify that you are not a robot");
+      return;
+    }
     const template_params = {
-      "g-recaptcha-response": captchaRef?.current?.getValue(),
+      "g-recaptcha-response": captchaRef.current.getValue(),
       name: data.name,
       email: data.email,
       message: data.message,
@@ -24,13 +33,16 @@ const ContactForm = () => {
         process.env.NEXT_PUBLIC_SERVICE_ID as string,
         process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
         template_params,
-        "4_pD1Wcr1YyYeUKxa"
+        process.env.NEXT_PUBLIC_PUBLIC_KEY as string
       )
-      .then((res) => {
-        console.log(res);
+      .then((_) => {
+        setSuccess("Message sent successfully");
+        captchaRef.current.reset();
+        reset();
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((_) => {
+        setError("Something went wrong");
+        reset();
       });
   };
 

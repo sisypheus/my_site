@@ -4,8 +4,13 @@ import ContactForm from "../components/ContactForm";
 import FadeIn from "../components/FadeIn";
 import Image from "next/image";
 import Script from "next/script";
+import Alert from "../components/Alert";
+import { useState } from "react";
 
 const Contact: NextPage = () => {
+  const [error, setErrror] = useState("");
+  const [success, setSuccess] = useState("");
+
   return (
     <>
       <Head>
@@ -19,7 +24,7 @@ const Contact: NextPage = () => {
           Get in touch
         </h1>
 
-        <ContactForm />
+        <ContactForm setSuccess={setSuccess} setError={setErrror} />
 
         <div className="mt-8">
           <h1 className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
@@ -55,6 +60,8 @@ const Contact: NextPage = () => {
           </div>
         </div>
       </FadeIn>
+      {success && <Alert message={success} type="success" />}
+      {error && <Alert message={error} type="error" />}
     </>
   );
 };
