@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import FadeIn from "../components/FadeIn";
 import ProjectShowcase from "../components/ProjectShowcase";
 
@@ -32,18 +33,18 @@ const Projects: NextPage = () => {
             website="https://blog.theopoette.me"
           />
           <ProjectShowcase
-            name="Amazon tracker"
-            description="Amazon price wishlist price tracker"
-            image="/projects/tracker.png"
-            github="https://github.com/sisypheus/amz-tracker"
-            website="https://amz-tracker.netlify.app/"
-          />
-          <ProjectShowcase
             name="Artnet"
             description="Social media app for artists"
             image="/projects/artnet.png"
             github="https://github.com/sisypheus/artnet"
             website="https://artnet.netlify.app/"
+          />
+          <ProjectShowcase
+            name="Amazon tracker"
+            description="Amazon price wishlist price tracker"
+            image="/projects/tracker.png"
+            github="https://github.com/sisypheus/amz-tracker"
+            website="https://amz-tracker.netlify.app/"
           />
           <ProjectShowcase
             name="Dashboard"
@@ -70,6 +71,15 @@ const Projects: NextPage = () => {
             image="/projects/chatapp.png"
             github="https://github.com/sisypheus/chatappv2"
           />
+        </div>
+
+        <div className="mt-16 flex items-center justify-center">
+          <Link
+            className="rounded-lg bg-blue-300 px-4 py-2 shadow"
+            href="/contact"
+          >
+            Contact me
+          </Link>
         </div>
       </FadeIn>
     </>
