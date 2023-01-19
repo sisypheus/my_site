@@ -9,7 +9,7 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const captchaRef = useRef(null);
+  const captchaRef = useRef<any>(null);
 
   const submit = (data: any) => {
     console.log(data);
