@@ -1,4 +1,7 @@
 import { useForm } from "react-hook-form";
+import * as emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useRef } from "react";
 
 const ContactForm = () => {
   const {
@@ -6,9 +9,29 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const captchaRef = useRef(null);
 
   const submit = (data: any) => {
     console.log(data);
+    const template_params = {
+      "g-recaptcha-response": captchaRef?.current?.getValue(),
+      name: data.name,
+      email: data.email,
+      message: data.message,
+    };
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+        template_params,
+        "4_pD1Wcr1YyYeUKxa"
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -75,6 +98,10 @@ const ContactForm = () => {
         {errors.message && (
           <p className="text-xs italic text-red-500">Message is required</p>
         )}
+        <ReCAPTCHA
+          sitekey="6LerUwwkAAAAAJl2VKdtACXk0CwitaIFdEXlebHT"
+          ref={captchaRef}
+        />
       </div>
       <div className="flex items-center justify-between">
         <button

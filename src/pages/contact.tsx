@@ -3,6 +3,7 @@ import Head from "next/head";
 import ContactForm from "../components/ContactForm";
 import FadeIn from "../components/FadeIn";
 import Image from "next/image";
+import Script from "next/script";
 
 const Contact: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Contact: NextPage = () => {
         <meta name="description" content="Work experience" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script src="https://www.google.com/recaptcha/api.js" />
       <FadeIn>
         <h1 className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
           Get in touch
