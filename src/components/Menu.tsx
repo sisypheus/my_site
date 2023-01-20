@@ -40,6 +40,7 @@ const Menu: NextPage = () => {
                   href="/projects"
                   activeClassName="text-blue-300"
                   className="pl-4 hover:underline"
+                  onClick={toggleMenu}
                 >
                   Projects
                 </ActiveLink>
@@ -47,6 +48,7 @@ const Menu: NextPage = () => {
                   href="/work"
                   activeClassName="text-blue-300"
                   className="pl-4 hover:underline"
+                  onClick={toggleMenu}
                 >
                   Work
                 </ActiveLink>
@@ -54,6 +56,7 @@ const Menu: NextPage = () => {
                   href="/contact"
                   activeClassName="text-blue-300"
                   className="pl-4 hover:underline"
+                  onClick={toggleMenu}
                 >
                   Contact
                 </ActiveLink>

@@ -45,7 +45,7 @@ const Work: NextPage = () => {
                   <p className="text-sm font-semibold leading-snug tracking-wide text-white">
                     Javascript, PHP, MySQL
                   </p>
-                  <p className="text-sm leading-snug tracking-wide text-gray-300">
+                  <p className="text-xs sm:text-sm leading-snug tracking-wide text-gray-300">
                     - Development of a new part of the existing learning
                     platform
                     <br />- Creation and upgrade of existing functionalities
@@ -55,12 +55,12 @@ const Work: NextPage = () => {
             </div>
 
             <div className="left-timeline mb-8 mt-16 flex w-full items-center justify-between">
-              <div className="order-1 w-5/12 rounded-lg bg-gray-600 p-4 shadow-xl">
+              <div className="order-1 w-5/12 rounded-lg bg-gray-600 p-3 shadow-xl sm:p-4">
                 <div>
                   <p className="text-sm font-semibold leading-snug tracking-wide text-white">
                     React, Typescript, AWS, Node, Postgres, Express
                   </p>
-                  <p className="text-sm leading-snug tracking-wide text-gray-300">
+                  <p className="text-xs leading-snug tracking-wide text-gray-300 sm:text-sm">
                     - Back-end redesign to improve scalability
                     <br />
                     - Implementation of new statistics for member cities
@@ -122,7 +122,7 @@ const Work: NextPage = () => {
                   <p className="text-sm font-semibold leading-snug tracking-wide text-white">
                     React, Typescript, AWS, Node, MongoDB, Express
                   </p>
-                  <p className="text-sm leading-snug tracking-wide text-gray-200">
+                  <p className="text-xs sm:text-sm leading-snug tracking-wide text-gray-200">
                     - Development of the back & front-end for a new offering
                     <br />
                     - Improvements on the current website for customers
