@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import Circle from "../components/Circle";
 import FadeIn from "../components/FadeIn";
 
@@ -13,8 +13,15 @@ const Home: NextPage = () => {
   useEffect(() => {
     if (!animRef.current) return;
 
-    setCirclesMaxSize(animRef.current.clientWidth);
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
   }, [animRef]);
+
+  const updateSize = () => {
+    if (!animRef.current) return;
+    setCirclesMaxSize(animRef.current.clientWidth);
+  };
 
   const age = () => {
     const today = new Date();
