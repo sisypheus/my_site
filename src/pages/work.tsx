@@ -46,7 +46,9 @@ const Work: NextPage = () => {
                     Javascript, PHP, MySQL
                   </p>
                   <p className="text-sm leading-snug tracking-wide text-gray-300">
-                    Yes i did some things whatever
+                    - Development of a new part of the existing learning
+                    platform
+                    <br />- Creation and upgrade of existing functionalities
                   </p>
                 </div>
               </div>
@@ -59,7 +61,10 @@ const Work: NextPage = () => {
                     React, Typescript, AWS, Node, Postgres, Express
                   </p>
                   <p className="text-sm leading-snug tracking-wide text-gray-300">
-                    Yes i did some things whatever
+                    - Back-end redesign to improve scalability
+                    <br />
+                    - Implementation of new statistics for member cities
+                    <br />- Creation of a new front-end for member cities
                   </p>
                 </div>
               </div>
@@ -118,7 +123,11 @@ const Work: NextPage = () => {
                     React, Typescript, AWS, Node, MongoDB, Express
                   </p>
                   <p className="text-sm leading-snug tracking-wide text-gray-200">
-                    Yes i did some things whatever
+                    - Development of the back & front-end for a new offering
+                    <br />
+                    - Improvements on the current website for customers
+                    <br />- Creation of new functionalities for the current
+                    website
                   </p>
                 </div>
               </div>
