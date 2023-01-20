@@ -33,8 +33,8 @@ const Contact: NextPage = () => {
 
         <ContactForm setSuccess={setSuccess} setError={setErrror} />
 
-        <div className="mt-8 flex flex-col items-center justify-center">
-          <h1 className="text-xl tracking-tight text-white">
+        <div className="mt-8 flex flex-col items-center justify-center space-y-4">
+          <h1 className="text-center text-xl leading-6 tracking-tight text-white">
             Or send me an email from your preferred app
           </h1>
 
