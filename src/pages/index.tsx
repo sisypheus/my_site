@@ -1,4 +1,6 @@
 import { type NextPage } from "next";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +9,7 @@ import Circle from "../components/Circle";
 import FadeIn from "../components/FadeIn";
 
 const Home: NextPage = () => {
+  const { t } = useTranslation("common");
   const animRef = useRef<HTMLDivElement>(null);
   const [circlesMaxSize, setCirclesMaxSize] = useState(0);
 
@@ -45,7 +48,8 @@ const Home: NextPage = () => {
       <FadeIn>
         <div className="mt-8 flex w-full items-center justify-center rounded-lg bg-blue-200/70 px-8 py-4">
           <p className="text-center text-white opacity-100">
-            Hello, I'm Theo, a software engineer based in France 🇫🇷 !
+            {t('greeting')}
+            {/* Hello, I'm Theo, a software engineer based in France 🇫🇷 ! */}
           </p>
         </div>
 
@@ -155,3 +159,11 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
