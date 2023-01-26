@@ -12,8 +12,8 @@ const CharacterModel = () => {
   model.castShadow = true;
 
   model.traverse((node) => {
-    if (node.isMesh) {
-      node.material.shininess = 0;
+    if ((node as any).isMesh) {
+      (node as any).material.shininess = 0;
     }
   });
 
