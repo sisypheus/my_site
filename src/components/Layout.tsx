@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Character from "./Character";
 import Footer from "./Footer";
 import Menu from "./Menu";
 
@@ -9,7 +10,7 @@ const Layout: NextPage = ({ children }: any) => {
         <div className="mx-auto w-full px-4">
           <Menu />
           <div className="w-full px-2 md:px-12">
-            <div className="h-80">test</div>
+            <Character />
             <div className="block">{children}</div>
           </div>
         </div>
