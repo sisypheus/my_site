@@ -5,7 +5,7 @@ import * as THREE from "three";
 import { useThree } from "@react-three/fiber";
 
 const ThreeLayout = () => {
-  const [target, setTarget] = useState(new THREE.Vector3(-0.5, 12, 0));
+  const [target, setTarget] = useState(new THREE.Vector3(-0.5, 12.2, 0));
 
   const { camera } = useThree();
 
@@ -21,16 +21,20 @@ const ThreeLayout = () => {
 
   return (
     <mesh>
-      <ambientLight intensity={0.5} color={0xffffff} />
       <directionalLight
         position={[0, 10, 5]}
         intensity={0.8}
-        color={0xffffff}
+        color={0xcccccc}
       />
       <directionalLight
         position={[0, -10, 5]}
         intensity={0.8}
-        color={0xffffff}
+        color={0xcccccc}
+      />
+      <directionalLight
+        position={[0, 0, -5]}
+        intensity={0.8}
+        color={0xcccccc}
       />
       <OrbitControls autoRotate target={target} />
       <Suspense>
