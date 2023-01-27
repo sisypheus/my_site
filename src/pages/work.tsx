@@ -159,7 +159,7 @@ export default Work;
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["work"])),
+      ...(await serverSideTranslations(locale, ["work", "menu"])),
     },
   };
 }

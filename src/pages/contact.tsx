@@ -97,7 +97,7 @@ export default Contact;
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["contact"])),
+      ...(await serverSideTranslations(locale, ["contact", "menu"])),
     },
   };
 }

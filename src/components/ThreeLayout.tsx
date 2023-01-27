@@ -3,6 +3,7 @@ import { Suspense, useEffect, useState } from "react";
 import CharacterModel from "./CharacterModel";
 import * as THREE from "three";
 import { useThree } from "@react-three/fiber";
+import { Html, useProgress } from "@react-three/drei";
 
 const ThreeLayout = () => {
   const [target, setTarget] = useState(new THREE.Vector3(-0.5, 12.2, 0));
@@ -42,9 +43,7 @@ const ThreeLayout = () => {
         color={0xcccccc}
       />
       <OrbitControls autoRotate target={target} />
-      <Suspense>
-        <CharacterModel />
-      </Suspense>
+      <CharacterModel />
     </mesh>
   );
 };

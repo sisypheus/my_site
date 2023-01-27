@@ -1,12 +1,12 @@
 {
   "title": "Projets",
-  "babble": "Application de messagerie pour propriétaires de projets",
+  "babble": "Application de messagerie instantanée",
   "blog": "Mon blog personnel",
   "artnet": "Réseau social destiné aux artistes",
   "amz": "Trackeur de prix pour wishlist Amazon",
   "dashboard": "Dashboard modulaire et customisable avec widgets",
   "other": "Autres projets",
   "sidekick": "Application mobile pour améliorer sa santé",
-  "chatapp": "Application de chat en temps réel avec golang et react",
+  "chatapp": "Application de chat en temps réel",
   "contact": "Contactez-moi"
 }
