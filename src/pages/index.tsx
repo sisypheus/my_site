@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 
       <FadeIn>
         <div className="mt-8 flex w-full items-center justify-center rounded-lg bg-blue-200/70 px-8 py-4">
-          <p className="text-center text-white opacity-100">{t("greeting")}</p>
+          <p className="text-center text-white opacity-100">{t('greeting')}</p>
         </div>
 
         <div className="mt-8 flex w-full flex-col items-center justify-center sm:flex-row sm:justify-between">
@@ -137,7 +137,7 @@ export default Home;
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ["common"])),
+      ...(await serverSideTranslations(locale, ["common"])),
     },
   };
 }
