@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import Link from "next/link";
@@ -6,6 +7,7 @@ import FadeIn from "../components/FadeIn";
 import ProjectShowcase from "../components/ProjectShowcase";
 
 const Projects: NextPage = () => {
+  const { t } = useTranslation("projects");
   return (
     <>
       <Head>
@@ -21,35 +23,35 @@ const Projects: NextPage = () => {
         <div className="mt-4 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-8">
           <ProjectShowcase
             name="Babble"
-            description="Messaging app for business owners"
+            description={t("babble")}
             image="/projects/babble.png"
             github="https://github.com/sisypheus/babble-website"
             website="https://babble.fr/"
           />
           <ProjectShowcase
             name="My blog"
-            description="My personal blog"
+            description={t("blog")}
             image="/projects/blog.png"
             github="https://github.com/sisypheus/blogv2"
             website="https://blog.theopoette.me"
           />
           <ProjectShowcase
             name="Artnet"
-            description="Social media app for artists"
+            description={t("artnet")}
             image="/projects/artnet.png"
             github="https://github.com/sisypheus/artnet"
             website="https://artnet.netlify.app/"
           />
           <ProjectShowcase
             name="Amazon tracker"
-            description="Amazon price wishlist price tracker"
+            description={t("amz")}
             image="/projects/tracker.png"
             github="https://github.com/sisypheus/amz-tracker"
             website="https://amz-tracker.netlify.app/"
           />
           <ProjectShowcase
             name="Dashboard"
-            description="Modular and customizable dashboard with widgets"
+            description={t("dashboard")}
             image="/projects/dashboard.png"
             github="https://github.com/sisypheus/dashboardv2"
             website="https://v2-dashboard.netlify.app/"
@@ -62,13 +64,13 @@ const Projects: NextPage = () => {
         <div className="mt-4 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-8">
           <ProjectShowcase
             name="Sidekick"
-            description="Mobile app for improving your health"
+            description={t("sidekick")}
             image="/projects/sidekick.png"
             github="https://github.com/Sidekick-EIP"
           />
           <ProjectShowcase
             name="Chatapp"
-            description="Chat app with rooms made with go and react"
+            description={t("chatapp")}
             image="/projects/chatapp.png"
             github="https://github.com/sisypheus/chatappv2"
           />
@@ -79,7 +81,7 @@ const Projects: NextPage = () => {
             className="rounded-lg bg-blue-300 px-4 py-2 shadow"
             href="/contact"
           >
-            Contact me
+            {t("contact")}
           </Link>
         </div>
       </FadeIn>
@@ -92,9 +94,7 @@ export default Projects;
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      /* ...(await serverSideTranslations(locale, ["common"])), */
+      ...(await serverSideTranslations(locale, ["projects"])),
     },
   };
 }
-
-

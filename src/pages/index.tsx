@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 
       <FadeIn>
         <div className="mt-8 flex w-full items-center justify-center rounded-lg bg-blue-200/70 px-8 py-4">
-          <p className="text-center text-white opacity-100">{t('greeting')}</p>
+          <p className="text-center text-white opacity-100">{t("greeting")}</p>
         </div>
 
         <div className="mt-8 flex w-full flex-col items-center justify-center sm:flex-row sm:justify-between">
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
               Theo Poette
             </p>
             <p className="text-center text-lg font-light tracking-wide text-white sm:text-left">
-              Full-stack software engineer
+              {t("title")}
             </p>
           </div>
           <Image
@@ -71,11 +71,10 @@ const Home: NextPage = () => {
         <div
           ref={animRef}
           className="relative mt-8 flex flex-col"
-          /* style={{ height: circlesMaxSize * 0.7 }} */
           id="skills"
         >
           <p className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
-            Skills
+            {t("skills_title")}
           </p>
 
           <div style={{ height: circlesMaxSize * 0.85 }}>
@@ -108,12 +107,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <p className="text-white">
-          I am mainly working in the JavaScript (Typescript) ecosystem and have
-          experience with React, Next.js, Node.js, Nest.js, and PostgreSQL. I am
-          also familiar with Docker, Github, and cloud platforms like AWS and
-          DigitalOcean. I work primarily on Linux and am always looking to
-          expand my skillset. I prefer backend development, and I'm learning
-          Rust and Go.
+          {t("skills")}
         </p>
 
         <div className="mt-8 flex items-center justify-center space-x-4">

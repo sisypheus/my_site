@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRef } from "react";
+import { useTranslation } from "next-i18next";
 
 interface Props {
   setSuccess: (value: string) => void;
@@ -16,6 +17,7 @@ const ContactForm = ({ setSuccess, setError }: Props) => {
     reset,
   } = useForm();
   const captchaRef = useRef<any>(null);
+  const { t } = useTranslation("contact");
 
   const submit = (data: any) => {
     if (!captchaRef?.current?.getValue()) {
@@ -50,7 +52,7 @@ const ContactForm = ({ setSuccess, setError }: Props) => {
     <form onSubmit={handleSubmit(submit)}>
       <div className="my-4">
         <label className="mb-2 block font-medium text-gray-200" htmlFor="name">
-          Name
+          {t("name")}
         </label>
         <input
           {...register("name", { required: true })}
@@ -60,7 +62,7 @@ const ContactForm = ({ setSuccess, setError }: Props) => {
           type="text"
           name="name"
           id="name"
-          placeholder="Name surname"
+          placeholder={`${t("name")} ${t("surname")}`}
         />
         {errors.name && (
           <p className="text-xs italic text-red-500">Name is required</p>
@@ -102,7 +104,7 @@ const ContactForm = ({ setSuccess, setError }: Props) => {
           className={`w-full rounded-md border border-gray-400 p-2 ${
             errors.message ? "border-red-500" : ""
           }`}
-          placeholder="Your message"
+          placeholder={`${t("your_message")}`}
           name="message"
           id="message"
           rows={4}
@@ -120,7 +122,7 @@ const ContactForm = ({ setSuccess, setError }: Props) => {
           className="rounded-md bg-blue-400 py-2 px-4 font-medium text-white"
           type="submit"
         >
-          Send
+          {t("send")}
         </button>
       </div>
     </form>

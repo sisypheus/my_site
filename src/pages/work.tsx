@@ -4,8 +4,11 @@ import Head from "next/head";
 import FadeIn from "../components/FadeIn";
 import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 const Work: NextPage = () => {
+  const { t } = useTranslation("work");
+
   return (
     <>
       <Head>
@@ -30,10 +33,10 @@ const Work: NextPage = () => {
                   Nextraining
                 </p>
                 <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
-                  Full-stack engineer
+                  {t("title")}
                 </p>
                 <p className="text-center text-xs font-semibold leading-snug tracking-wide text-gray-900">
-                  (6 months)
+                  (6 {t("months")})
                 </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
@@ -44,12 +47,12 @@ const Work: NextPage = () => {
               <div className="order-1 w-5/12 rounded-lg bg-gray-600 p-4 shadow-xl">
                 <div>
                   <p className="text-sm font-semibold leading-snug tracking-wide text-white">
-                    Javascript, PHP, MySQL
+                    {t("nextraining_tech")}
                   </p>
-                  <p className="text-xs sm:text-sm leading-snug tracking-wide text-gray-300">
-                    - Development of a new part of the existing learning
-                    platform
-                    <br />- Creation and upgrade of existing functionalities
+                  <p className="text-xs leading-snug tracking-wide text-gray-300 sm:text-sm">
+                    {t("nextraining_1")}
+                    <br />
+                    {t("nextraining_2")}
                   </p>
                 </div>
               </div>
@@ -59,13 +62,14 @@ const Work: NextPage = () => {
               <div className="order-1 w-5/12 rounded-lg bg-gray-600 p-3 shadow-xl sm:p-4">
                 <div>
                   <p className="text-sm font-semibold leading-snug tracking-wide text-white">
-                    React, Typescript, AWS, Node, Postgres, Express
+                    {t("bouge_tech")}
                   </p>
                   <p className="text-xs leading-snug tracking-wide text-gray-300 sm:text-sm">
-                    - Back-end redesign to improve scalability
+                    {t("bouge_1")}
                     <br />
-                    - Implementation of new statistics for member cities
-                    <br />- Creation of a new front-end for member cities
+                    {t("bouge_2")}
+                    <br />
+                    {t("bouge_3")}
                   </p>
                 </div>
               </div>
@@ -86,10 +90,10 @@ const Work: NextPage = () => {
                   Bouge
                 </p>
                 <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
-                  Full-stack engineer
+                  {t("title")}
                 </p>
                 <p className="text-center text-xs font-semibold leading-snug tracking-wide text-gray-900">
-                  (6 months)
+                  (6 {t("months")})
                 </p>
               </div>
             </div>
@@ -107,10 +111,10 @@ const Work: NextPage = () => {
                   Lamafactory
                 </p>
                 <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
-                  Full-stack engineer
+                  {t("title")}
                 </p>
                 <p className="text-center text-xs font-semibold leading-snug tracking-wide text-gray-900">
-                  (5 months)
+                  (5 {t("months")})
                 </p>
               </div>
               <div className="z-20 order-1 flex items-center shadow-xl">
@@ -121,14 +125,14 @@ const Work: NextPage = () => {
               <div className="order-1 w-5/12 rounded-lg bg-gray-600 p-4 shadow-xl">
                 <div>
                   <p className="text-sm font-semibold leading-snug tracking-wide text-white">
-                    React, Typescript, AWS, Node, MongoDB, Express
+                    {t("lama_tech")}
                   </p>
-                  <p className="text-xs sm:text-sm leading-snug tracking-wide text-gray-200">
-                    - Development of the back & front-end for a new offering
+                  <p className="text-xs leading-snug tracking-wide text-gray-200 sm:text-sm">
+                    {t("lama_1")}
                     <br />
-                    - Improvements on the current website for customers
-                    <br />- Creation of new functionalities for the current
-                    website
+                    {t("lama_2")}
+                    <br />
+                    {t("lama_3")}
                   </p>
                 </div>
               </div>
@@ -136,13 +140,13 @@ const Work: NextPage = () => {
           </div>
         </div>
         <div className="mx-auto mt-8 flex w-fit flex-col items-center justify-center rounded-lg p-6">
-          <p className="text-lg font-semibold text-white">Now</p>
-          <p className="text-white">I'm open to new opportunities !</p>
+          <p className="text-lg font-semibold text-white">{t("now")}</p>
+          <p className="text-white">{t("free")}</p>
           <Link
             className="mt-2 rounded-lg bg-blue-300 px-4 py-2 shadow"
             href="/contact"
           >
-            Contact me
+            {t("contact")}
           </Link>
         </div>
       </FadeIn>
@@ -155,7 +159,7 @@ export default Work;
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      /* ...(await serverSideTranslations(locale, ["common"])), */
+      ...(await serverSideTranslations(locale, ["work"])),
     },
   };
 }

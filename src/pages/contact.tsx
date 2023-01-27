@@ -8,11 +8,13 @@ import Alert from "../components/Alert";
 import { useRef, useState } from "react";
 import CopyIcon from "../components/CopyIcon";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 const Contact: NextPage = () => {
   const [error, setErrror] = useState("");
   const [success, setSuccess] = useState("");
   const emailRef = useRef<any>(null);
+  const { t } = useTranslation("contact");
 
   const copyEmail = () => {
     navigator.clipboard.writeText(emailRef.current.textContent);
@@ -29,14 +31,14 @@ const Contact: NextPage = () => {
       <Script src="https://www.google.com/recaptcha/api.js" />
       <FadeIn>
         <h1 className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
-          Get in touch
+          {t("contact")}
         </h1>
 
         <ContactForm setSuccess={setSuccess} setError={setErrror} />
 
         <div className="mt-8 flex flex-col items-center justify-center space-y-4">
           <h1 className="text-center text-xl leading-6 tracking-tight text-white">
-            Or send me an email from your preferred app
+            {t("or")}
           </h1>
 
           <div
@@ -52,7 +54,7 @@ const Contact: NextPage = () => {
 
         <div className="mt-8">
           <h1 className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
-            Connect with me on
+            {t("connect")}
           </h1>
 
           <div className="mt-8 flex items-center justify-center space-x-4">
@@ -95,8 +97,7 @@ export default Contact;
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      /* ...(await serverSideTranslations(locale, ["common"])), */
+      ...(await serverSideTranslations(locale, ["contact"])),
     },
   };
 }
-

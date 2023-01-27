@@ -1,0 +1,18 @@
+{
+  "title": "Développeur Full-stack",
+  "months": "mois",
+  "nextraining_tech": "Javascript, PHP, MySQL",
+  "nextraining_1": "- Développement d'une nouvelle partie de la plateforme d'apprentissage",
+  "nextraining_2": "- Création et amlérioration de fonctionnalités existantes",
+  "bouge_tech": "React, Typescript, AWS, Node, Postgres, Express",
+  "bouge_1": "- Re-design du back-end pour améliorer la scalabilité",
+  "bouge_2": "- Implémenation de nouvelles statistiques pour villes membres",
+  "bouge_3": "- Création d'un nouveau front-end pour les villes membres",
+  "lama_tech": "React, Typescript, AWS, Node, MongoDB, Express",
+  "lama_1": "- Développement d'un nouveau front-end pour une nouvelle offre",
+  "lama_2": "- Amélioration de l'expérience utilisateur sur le site existant",
+  "lama_3": "- Création de nouvelles fonctionnalités pour le site existant",
+  "now": "Maintenant",
+  "free": "Je suis ouvert à de nouvelles opportunités !",
+  "contact": "Contactez-moi"
+}
