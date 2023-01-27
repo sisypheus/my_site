@@ -3,6 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 import FadeIn from "../components/FadeIn";
 import Link from "next/link";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Work: NextPage = () => {
   return (
@@ -150,3 +151,11 @@ const Work: NextPage = () => {
 };
 
 export default Work;
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      /* ...(await serverSideTranslations(locale, ["common"])), */
+    },
+  };
+}

@@ -22,17 +22,22 @@ const ThreeLayout = () => {
   return (
     <mesh>
       <directionalLight
-        position={[0, 10, 5]}
+        position={[0, 15, 5]}
         intensity={0.8}
         color={0xcccccc}
       />
       <directionalLight
-        position={[0, -10, 5]}
+        position={[0, -15, 5]}
         intensity={0.8}
         color={0xcccccc}
       />
       <directionalLight
-        position={[0, 0, -5]}
+        position={[10, 0, -5]}
+        intensity={0.8}
+        color={0xcccccc}
+      />
+      <directionalLight
+        position={[-10, 0, -5]}
         intensity={0.8}
         color={0xcccccc}
       />

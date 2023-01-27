@@ -1,3 +1,8 @@
 {
-  "greeting": "Bonjour, je suis Théo, un développeur basé en France 🇫🇷 !"
+  "greeting": "Bonjour, je suis Théo, un développeur basé en France 🇫🇷 !",
+  "position": "Développeur Full-stack",
+  "skills": "Je travaille principalement dans l'écosystème JavaScript (Typescript) et j'ai de l'expérience avec React, Next.js, Node.js, Nest.js et PostgreSQL. Je suis également familier avec Docker, Github et les plateformes cloud comme AWS et DigitalOcean. Je travaille principalement sur Linux et je cherche toujours à élargir mes compétences. Je préfère le développement backend et je suis en train d'apprendre Rust et Go.",
+  "skills_title": "Compétences",
+  "about": "J'ai 20 ans et je suis étudiant en informatique français spécialisé dans le développement web, en particulier dans le développement backend et fullstack mais également dans le devops. J'ai étudié en France, à Epitech, et au Canada à l'Université Laval, où j'ai étudié l'informatique. Je travaille sur beaucoup de projets, tant personnels que professionnels, et je suis toujours ouvert à de nouvelles opportunités pour grandir et apprendre.",
+  "about_title": "À propos de moi",
 }

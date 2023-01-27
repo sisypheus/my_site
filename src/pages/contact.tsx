@@ -7,6 +7,7 @@ import Script from "next/script";
 import Alert from "../components/Alert";
 import { useRef, useState } from "react";
 import CopyIcon from "../components/CopyIcon";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Contact: NextPage = () => {
   const [error, setErrror] = useState("");
@@ -90,3 +91,12 @@ const Contact: NextPage = () => {
 };
 
 export default Contact;
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      /* ...(await serverSideTranslations(locale, ["common"])), */
+    },
+  };
+}
+

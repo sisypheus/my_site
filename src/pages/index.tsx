@@ -4,13 +4,14 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState, useLayoutEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Circle from "../components/Circle";
 import FadeIn from "../components/FadeIn";
 
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
   const animRef = useRef<HTMLDivElement>(null);
+
   const [circlesMaxSize, setCirclesMaxSize] = useState(0);
 
   useEffect(() => {
@@ -26,17 +27,6 @@ const Home: NextPage = () => {
     setCirclesMaxSize(animRef.current.clientWidth);
   };
 
-  const age = () => {
-    const today = new Date();
-    const birthDate = new Date("2002-05-01");
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
-    return age;
-  };
-
   return (
     <>
       <Head>
@@ -47,10 +37,7 @@ const Home: NextPage = () => {
 
       <FadeIn>
         <div className="mt-8 flex w-full items-center justify-center rounded-lg bg-blue-200/70 px-8 py-4">
-          <p className="text-center text-white opacity-100">
-            {t('greeting')}
-            {/* Hello, I'm Theo, a software engineer based in France 🇫🇷 ! */}
-          </p>
+          <p className="text-center text-white opacity-100">{t("greeting")}</p>
         </div>
 
         <div className="mt-8 flex w-full flex-col items-center justify-center sm:flex-row sm:justify-between">
@@ -73,24 +60,11 @@ const Home: NextPage = () => {
 
         <div className="mt-8">
           <h1 className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
-            About me
+            {t("about_title")}
           </h1>
           <p className="mt-2 font-light text-white">
             <span className="ml-4" />
-            I'm {age()}, and I'm a french computer science student that
-            specializes in web development, especially towards backend and
-            fullstack development as well as devops. I've studied in France, at
-            <a className="text-blue-300" href="https://www.epitech.eu/">
-              {" "}
-              Epitech
-            </a>
-            , and in Canada at the{" "}
-            <a className="text-blue-300" href="https://www.ulaval.ca/">
-              Université Laval
-            </a>
-            , where I studied computer science. I'm working on a lot of
-            projects, both personal and professional, and I'm always open to new
-            opportunities to grow and learn.
+            {t("about")}
           </p>
         </div>
 
@@ -163,7 +137,7 @@ export default Home;
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale ?? 'en', ["common"])),
     },
   };
 }
