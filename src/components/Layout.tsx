@@ -1,7 +1,20 @@
 import { NextPage } from "next";
-import Character from "./Character";
+import dynamic from "next/dynamic";
 import Footer from "./Footer";
 import Menu from "./Menu";
+
+const Loading = () => {
+  return (
+    <div className="flex h-full items-center justify-center">
+      <div className="h-24 w-24 animate-spin rounded-full border-b-2 border-gray-900"></div>
+    </div>
+  );
+};
+
+const LazyCharacter = dynamic(() => import("./Character"), {
+  ssr: false,
+  loading: () => <Loading />,
+});
 
 const Layout: NextPage = ({ children }: any) => {
   return (
@@ -10,7 +23,10 @@ const Layout: NextPage = ({ children }: any) => {
         <div className="mx-auto w-full px-4">
           <Menu />
           <div className="w-full px-2 md:px-12">
-            <Character />
+            <div className="h-80">
+              <LazyCharacter />
+            </div>
+
             <div className="block">{children}</div>
           </div>
         </div>
