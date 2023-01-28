@@ -42,8 +42,8 @@
 
 ### Built With
 
-* [![Next][Next.js]][https://nextjs.org/]
-* [![Tailwind][Tailwindcss]][https://tailwindcss.com/]
+* [![Next][Next.js]][Next-url]
+* [![Tailwind][Tailwindcss]][Tailwind-url]
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -93,4 +93,4 @@ To get a local copy up and running follow these simple example steps.
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [Tailwindcss]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
-[Tailwind]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwindcss.com
