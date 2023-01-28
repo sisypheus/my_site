@@ -42,8 +42,8 @@
 
 ### Built With
 
-* [![Next][Next.js]][https://nextjs.org/]
-* [![Tailwind][Tailwindcss]][https://tailwindcss.com/]
+* [![Next][Next.js]][Next-url]
+* [![Tailwind][Tailwindcss]][Tailwind-url]
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -69,11 +69,6 @@ To get a local copy up and running follow these simple example steps.
    npm run dev
    ```
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
@@ -97,5 +92,5 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [product-screenshot]: public/preview.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
-[Tailwindcss]: https://tailwindcss.com
-[Tailwind]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwindcss]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwindcss.com
