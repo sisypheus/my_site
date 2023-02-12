@@ -1,23 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
-   <loc>https://theopoette.me</loc>
+   <loc>https://theopoette.me/en</loc>
    <changefreq>hourly</changefreq>
    <priority>1.0</priority>
+   <xhtml:link
+             rel="alternate"
+             hreflang="en"
+   href="https://theopoette.me/en"/>
+   <xhtml:link
+             rel="alternate"
+             hreflang="fr"
+   href="https://theopoette.me/fr"/>
  </url>
  <url>
-   <loc>https://theopoette.me/work</loc>
+   <loc>https://theopoette.me/en/work</loc>
    <changefreq>hourly</changefreq>
    <priority>0.9</priority>
+   <xhtml:link
+             rel="alternate"
+             hreflang="en"
+     href="https://theopoette.me/en/work"/>
+   <xhtml:link
+             rel="alternate"
+             hreflang="fr"
+     href="https://theopoette.me/fr/work"/>
  </url>
  <url>
-   <loc>https://theopoette.me/projects</loc>
+   <loc>https://theopoette.me/en/projects</loc>
    <changefreq>hourly</changefreq>
    <priority>0.9</priority>
+   <xhtml:link
+             rel="alternate"
+             hreflang="en"
+     href="https://theopoette.me/en/projects"/>
+   <xhtml:link
+             rel="alternate"
+             hreflang="fr"
+     href="https://theopoette.me/fr/projects"/>
  </url>
  <url>
-   <loc>https://theopoette.me/contact</loc>
+   <loc>https://theopoette.me/en/contact</loc>
    <changefreq>hourly</changefreq>
    <priority>0.9</priority>
+   <xhtml:link
+             rel="alternate"
+             hreflang="en"
+     href="https://theopoette.me/en/contact"/>
+   <xhtml:link
+             rel="alternate"
+             hreflang="fr"
+     href="https://theopoette.me/en/contact"/>
  </url>
 </urlset>
