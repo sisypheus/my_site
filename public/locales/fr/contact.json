@@ -1,11 +1,12 @@
 {
   "contact": "Me contacter",
-  "name": "Nom",
-  "surname": "Prénom",
+  "name": "Messi",
+  "surname": "Lionel",
   "email": "Email",
   "message": "Message",
   "your_message": "Votre message",
   "send": "Envoyer",
   "or": "Ou envoyez moi un email directement",
-  "connect": "Retrouvez-moi sur"
+  "connect": "Retrouvez-moi sur",
+  "success": "Message envoyé"
 }

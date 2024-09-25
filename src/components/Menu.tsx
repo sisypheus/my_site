@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,6 +7,8 @@ import ActiveLink from "./ActiveLink";
 import FadeIn from "./FadeIn";
 import Github from "./Github";
 import MenuIcon from "./MenuIcon";
+import { Button } from "@/components/ui/button";
+import { MoveUpRight } from "lucide-react";
 
 const Menu: NextPage = () => {
   const router = useRouter();
@@ -83,6 +85,7 @@ const Menu: NextPage = () => {
                     className="relative cursor-default select-none py-2 text-gray-900"
                     id="listbox-option-0"
                     role="option"
+                    aria-selected
                   >
                     <div
                       onClick={changeLocale}
@@ -112,10 +115,9 @@ const Menu: NextPage = () => {
 
           {isOpen && (
             <FadeIn>
-              <div className="absolute top-0 right-0 mt-6 flex w-48 flex-col space-y-2 rounded-lg bg-slate-700 py-2">
+              <div className="absolute top-0 right-0 mt-6 flex w-48 flex-col space-y-2 rounded-lg bg-slate-700 py-2 items-center">
                 <ActiveLink
                   href="/projects"
-                  activeClassName="text-blue-300"
                   className="pl-4 hover:underline"
                   onClick={toggleMenu}
                 >
@@ -123,7 +125,6 @@ const Menu: NextPage = () => {
                 </ActiveLink>
                 <ActiveLink
                   href="/work"
-                  activeClassName="text-blue-300"
                   className="pl-4 hover:underline"
                   onClick={toggleMenu}
                 >
@@ -131,69 +132,64 @@ const Menu: NextPage = () => {
                 </ActiveLink>
                 <ActiveLink
                   href="/contact"
-                  activeClassName="text-blue-300"
                   className="pl-4 hover:underline"
                   onClick={toggleMenu}
                 >
                   Contact
                 </ActiveLink>
-                <a
+                <ActiveLink
                   target="_blank"
                   rel="noreferrer"
                   href="https://blog.theopoette.me"
+                  className="pl-4 hover:underline"
+                  onClick={toggleMenu}
                 >
-                  <p className="pl-4 hover:underline">Blog</p>
-                </a>
-                <a
+                  Blog
+                </ActiveLink>
+                <ActiveLink
+                  target="_blank"
                   rel="noreferrer"
                   href="https://github.com/sisypheus"
-                  className="flex items-center space-x-1 pl-4 hover:underline"
+                  className="pl-4 hover:underline"
+                  onClick={toggleMenu}
                 >
                   Github
-                </a>
+                </ActiveLink>
               </div>
             </FadeIn>
           )}
         </div>
 
         {/* desktop */}
-        <div className="ml-6 hidden items-center justify-center py-2 md:flex">
+        <div className="ml-6 hidden items-center justify-center py-2 md:flex md:space-x-4">
           <ActiveLink
             href="/projects"
-            activeClassName="text-gray-900 font-semibold bg-blue-300 py-2 rounded"
-            className="px-4 font-light underline-offset-2 hover:underline"
           >
             {t("projects")}
           </ActiveLink>
           <ActiveLink
             href="/work"
-            activeClassName="text-gray-900 font-semibold bg-blue-300 py-2 rounded"
-            className="px-4 font-light underline-offset-2 hover:underline"
           >
             {t("work")}
           </ActiveLink>
           <ActiveLink
             href="/contact"
-            activeClassName="text-gray-900 font-semibold bg-blue-300 py-2 rounded"
           >
-            <p className="px-4 font-light  underline-offset-2 hover:underline">
-              Contact
-            </p>
+            Contact
           </ActiveLink>
           <a target="_blank" rel="noreferrer" href="https://blog.theopoette.me">
-            <p className="px-4  font-light underline-offset-2 hover:underline">
+            <Button variant="expandIcon" Icon={MoveUpRight} iconPlacement="right" iconSize={14}>
               Blog
-            </p>
+            </Button>
           </a>
-          <a
-            rel="noreferrer"
-            href="https://github.com/sisypheus"
-            className="flex items-center space-x-1 px-4 underline-offset-2 hover:underline"
-          >
-            <div className="fill-current text-white">
-              <Github />
-            </div>
-            <p className="font-light">Github</p>
+          <a target="_blank" rel="noreferrer"
+            href="https://github.com/sisypheus">
+            <Button variant="expandIcon" Icon={MoveUpRight} iconPlacement="right" iconSize={14} className="space-x-2">
+              <div className="fill-current text-white">
+                <Github />
+              </div>
+              <p className="text-md">Github</p>
+            </Button>
           </a>
         </div>
       </div>

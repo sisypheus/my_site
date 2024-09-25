@@ -1,56 +1,49 @@
 import { useRouter } from "next/router";
-import Link, { LinkProps } from "next/link";
-import React, { PropsWithChildren, useState, useEffect } from "react";
+import type { LinkProps } from "next/link";
+import Link from "next/link";
+import type { PropsWithChildren } from "react";
+import React, { useState, useEffect } from "react";
+import { Button } from '@/components/ui/button';
 
 type ActiveLinkProps = LinkProps & {
   className?: string;
-  activeClassName: string;
+  activeClassName?: string;
+  target?: string;
+  rel?: string;
 };
+
+const excluded = ["https://blog.theopoette.me"]
 
 const ActiveLink = ({
   children,
-  activeClassName,
-  className,
+  className = "",
   ...props
 }: PropsWithChildren<ActiveLinkProps>) => {
   const { asPath, isReady } = useRouter();
-  const [computedClassName, setComputedClassName] = useState(className);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    // Check if the router fields are updated client-side
-    if (isReady) {
-      // Dynamic route will be matched via props.as
-      // Static route will be matched via props.href
-      const linkPathname = new URL(
-        (props.as || props.href) as string,
-        location.href
-      ).pathname;
+    if (!isReady) return;
 
-      // Using URL().pathname to get rid of query and hash
-      const activePathname = new URL(asPath, location.href).pathname;
+    if (excluded.includes(props.href as string))
+      return;
 
-      const newClassName =
-        linkPathname === activePathname
-          ? `${className} ${activeClassName}`.trim()
-          : className;
+    const hrefPathname = typeof props.href === 'string'
+      ? new URL(props.href, window.location.origin).pathname
+      : new URL((props.href as any).pathname, window.location.origin).pathname;
 
-      if (newClassName !== computedClassName) {
-        setComputedClassName(newClassName);
-      }
-    }
-  }, [
-    asPath,
-    isReady,
-    props.as,
-    props.href,
-    activeClassName,
-    className,
-    computedClassName,
-  ]);
+    const currentPathname = new URL(asPath, window.location.origin).pathname;
+
+    setIsActive(hrefPathname === currentPathname);
+  }, [asPath, isReady, props.href]);
+
+  const variant = isActive ? 'shine' : 'linkHover3';
 
   return (
-    <Link className={computedClassName} {...props} href={props.href ?? ''}>
-      {children}
+    <Link {...props} href={props.href ?? ''} passHref className={className}>
+      <Button variant={variant} className={className}>
+        {children}
+      </Button>
     </Link>
   );
 };

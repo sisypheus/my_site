@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Circle from "../components/Circle";
 import FadeIn from "../components/FadeIn";
+import { Button } from "@/components/ui/button";
 
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
       </Head>
 
       <FadeIn>
-        <div className="mt-8 flex w-full items-center justify-center rounded-lg bg-blue-200/70 px-8 py-4">
+        <div className="mt-8 flex w-full items-center justify-center rounded-lg bg-primary px-8 py-4">
           <p className="text-center text-white opacity-100">{t("greeting")}</p>
         </div>
 
@@ -111,15 +112,16 @@ const Home: NextPage = () => {
         </p>
 
         <div className="mt-8 flex items-center justify-center space-x-4">
-          <Link
-            className="rounded-lg bg-blue-300 px-4 py-2 shadow"
-            href="/projects"
-          >
-            Projects
-          </Link>
-          <Link className="rounded-lg bg-blue-300 px-4 py-2" href="/work">
-            Work
-          </Link>
+          <Button>
+            <Link href="/projects">
+              Projects
+            </Link>
+          </Button>
+          <Button>
+            <Link href="/work">
+              Work
+            </Link>
+          </Button>
         </div>
       </FadeIn>
     </>

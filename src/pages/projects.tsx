@@ -1,10 +1,11 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import Link from "next/link";
 import FadeIn from "../components/FadeIn";
 import ProjectShowcase from "../components/ProjectShowcase";
+import { Button } from "@/components/ui/button";
 
 const Projects: NextPage = () => {
   const { t } = useTranslation("projects");
@@ -26,7 +27,7 @@ const Projects: NextPage = () => {
             description={t("babble")}
             image="/projects/babble.png"
             github="https://github.com/sisypheus/babble-website"
-            website="https://babble.fr/"
+            website="https://babbles.fr/"
           />
           <ProjectShowcase
             name="My blog"
@@ -77,12 +78,11 @@ const Projects: NextPage = () => {
         </div>
 
         <div className="mt-16 flex items-center justify-center">
-          <Link
-            className="rounded-lg bg-blue-300 px-4 py-2 shadow"
-            href="/contact"
-          >
-            {t("contact")}
-          </Link>
+          <Button>
+            <Link href="/contact">
+              {t("contact")}
+            </Link>
+          </Button>
         </div>
       </FadeIn>
     </>

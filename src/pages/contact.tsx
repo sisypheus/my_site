@@ -30,7 +30,7 @@ const Contact: NextPage = () => {
       </Head>
       <Script src="https://www.google.com/recaptcha/api.js" />
       <FadeIn>
-        <h1 className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
+        <h1 className="mt-8 text-2xl font-medium tracking-wide text-white underline underline-offset-4">
           {t("contact")}
         </h1>
 

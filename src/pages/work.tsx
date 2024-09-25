@@ -5,6 +5,7 @@ import FadeIn from "../components/FadeIn";
 import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { Button } from "@/components/ui/button";
 
 const Work: NextPage = () => {
   const { t } = useTranslation("work");
@@ -137,17 +138,55 @@ const Work: NextPage = () => {
                 </div>
               </div>
             </div>
+
+            <div className="left-timeline mb-8 mt-16 flex w-full items-center justify-between">
+              <div className="order-1 w-5/12 rounded-lg bg-gray-600 p-3 shadow-xl sm:p-4">
+                <div>
+                  <p className="text-sm font-semibold leading-snug tracking-wide text-white">
+                    {t("kbrw_tech")}
+                  </p>
+                  <p className="text-xs leading-snug tracking-wide text-gray-300 sm:text-sm">
+                    {t("kbrw_1")}
+                    <br />
+                    {t("kbrw_2")}
+                    <br />
+                    {t("kbrw_3")}
+                  </p>
+                </div>
+              </div>
+              <div className="z-20 order-1 flex items-center shadow-xl">
+                <h1 className="mx-auto text-xs font-semibold text-white sm:text-lg">
+                  2023
+                </h1>
+              </div>
+              <div className="order-1 flex w-5/12 flex-col items-center justify-center space-y-1 rounded-lg bg-blue-200/70 p-4">
+                <Image
+                  src="/kbrw.png"
+                  alt="KBRW logo"
+                  className="w-24"
+                  width={600}
+                  height={600}
+                />
+                <p className="text-lg font-bold text-gray-900 sm:text-xl">
+                  KBRW
+                </p>
+                <p className="text-center text-sm font-semibold leading-snug tracking-wide text-gray-900">
+                  {t("title")}
+                </p>
+                <p className="text-center text-xs font-semibold leading-snug tracking-wide text-gray-900">
+                  {t("permanent_contract")}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="mx-auto mt-8 flex w-fit flex-col items-center justify-center rounded-lg p-6">
-          <p className="text-lg font-semibold text-white">{t("now")}</p>
           <p className="text-white">{t("free")}</p>
-          <Link
-            className="mt-2 rounded-lg bg-blue-300 px-4 py-2 shadow"
-            href="/contact"
-          >
+          <Button>
+          <Link href="/contact">
             {t("contact")}
           </Link>
+          </Button>
         </div>
       </FadeIn>
     </>

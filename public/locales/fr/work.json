@@ -12,6 +12,11 @@
   "lama_1": "- Développement d'un nouveau front-end pour une nouvelle offre",
   "lama_2": "- Amélioration de l'expérience utilisateur sur le site existant",
   "lama_3": "- Création de nouvelles fonctionnalités pour le site existant",
+  "kbrw_tech": "React, Typescript, Elixir, Node, Solr",
+  "kbrw_1": "- Re-design du back-end pour soutenir de grosses charges",
+  "kbrw_2": "- Amélioration de performances sur des features déjà existantes",
+  "kbrw_3": "- Création de nouvelles pages pour une meilleure visibilité d'actions",
+  "permanent_contract": "CDI",
   "now": "Maintenant",
   "free": "Je suis ouvert à de nouvelles opportunités !",
   "contact": "Contactez-moi"

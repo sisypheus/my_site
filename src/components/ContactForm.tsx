@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRef } from "react";
 import { useTranslation } from "next-i18next";
+import { Button } from "./ui/button";
 
 interface Props {
   setSuccess: (value: string) => void;
@@ -24,28 +24,12 @@ const ContactForm = ({ setSuccess, setError }: Props) => {
       setError("Please verify that you are not a robot");
       return;
     }
-    const template_params = {
-      "g-recaptcha-response": captchaRef.current.getValue(),
-      name: data.name,
-      email: data.email,
-      message: data.message,
-    };
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID as string,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
-        template_params,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY as string
-      )
-      .then((_) => {
-        setSuccess("Message sent successfully");
-        captchaRef.current.reset();
-        reset();
-      })
-      .catch((_) => {
-        setError("Something went wrong");
-        reset();
-      });
+
+    console.log(captchaRef.current.getValue())
+    // request to message back-end
+    setSuccess(t("success"));
+    captchaRef.current.reset()
+    reset()
   };
 
   return (
@@ -118,12 +102,9 @@ const ContactForm = ({ setSuccess, setError }: Props) => {
         />
       </div>
       <div className="flex items-center justify-between">
-        <button
-          className="rounded-md bg-blue-400 py-2 px-4 font-medium text-white"
-          type="submit"
-        >
+        <Button type="submit" size={"lg"} className="text-md">
           {t("send")}
-        </button>
+        </Button>
       </div>
     </form>
   );
