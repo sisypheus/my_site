@@ -36,7 +36,7 @@ const ContactForm = ({ setSuccess, setError }: Props) => {
     <form onSubmit={handleSubmit(submit)}>
       <div className="my-4">
         <label className="mb-2 block font-medium text-gray-200" htmlFor="name">
-          {t("name")}
+          {t("name_title")}
         </label>
         <input
           {...register("name", { required: true })}
