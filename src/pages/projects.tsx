@@ -6,6 +6,7 @@ import Link from "next/link";
 import FadeIn from "../components/FadeIn";
 import ProjectShowcase from "../components/ProjectShowcase";
 import { Button } from "@/components/ui/button";
+import { NextSeo } from "next-seo";
 
 const Projects: NextPage = () => {
   const { t } = useTranslation("projects");
@@ -13,9 +14,61 @@ const Projects: NextPage = () => {
     <>
       <Head>
         <title>Theo Poette - Projects</title>
-        <meta name="description" content="My projects" />
+        <meta name="description" content="Theo Poette's projects and portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NextSeo
+        title="Theo Poette - Projects"
+        description="Explore Theo Poette's projects and portfolio"
+        openGraph={{
+          title: "Theo Poette - Projects",
+          description: "Explore Theo Poette's projects and portfolio",
+          images: [
+            {
+              url: "/projects/babble.png",
+              width: 800,
+              height: 600,
+              alt: "Babble Project",
+            },
+            {
+              url: "/projects/blog.png",
+              width: 800,
+              height: 600,
+              alt: "Theo Poette's Blog",
+            },
+            {
+              url: "/projects/artnet.png",
+              width: 800,
+              height: 600,
+              alt: "Artnet Project",
+            },
+            {
+              url: "/projects/tracker.png",
+              width: 800,
+              height: 600,
+              alt: "Amazon Tracker Project",
+            },
+            {
+              url: "/projects/dashboard.png",
+              width: 800,
+              height: 600,
+              alt: "Dashboard Project",
+            },
+            {
+              url: "/projects/sidekick.png",
+              width: 800,
+              height: 600,
+              alt: "Sidekick Project",
+            },
+            {
+              url: "/projects/chatapp.png",
+              width: 800,
+              height: 600,
+              alt: "Chat App Project",
+            },
+          ],
+        }}
+      />
 
       <FadeIn>
         <h1 className="text-xl font-medium tracking-wide text-white underline underline-offset-4">

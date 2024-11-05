@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
 import ContactForm from "../components/ContactForm";
 import FadeIn from "../components/FadeIn";
@@ -9,6 +9,8 @@ import { useRef, useState } from "react";
 import CopyIcon from "../components/CopyIcon";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { NextSeo } from "next-seo";
+import CVDownload from "@/components/CVDownload";
 
 const Contact: NextPage = () => {
   const [error, setErrror] = useState("");
@@ -24,10 +26,32 @@ const Contact: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Theo Poette - Work</title>
-        <meta name="description" content="Work experience" />
+        <title>Theo Poette - Contact</title>
+        <meta name="description" content="Get in touch with Theo Poette" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NextSeo
+        title="Theo Poette - Contact"
+        description="Contact Theo Poette for more information or collaboration opportunities."
+        openGraph={{
+          title: "Theo Poette - Contact",
+          description: "Contact Theo Poette for more information or collaboration opportunities.",
+          images: [
+            {
+              url: "/logos/linkedin.svg",
+              width: 40,
+              height: 40,
+              alt: "LinkedIn Logo",
+            },
+            {
+              url: "/logos/github.svg",
+              width: 40,
+              height: 40,
+              alt: "GitHub Logo",
+            },
+          ],
+        }}
+      />
       <Script src="https://www.google.com/recaptcha/api.js" />
       <FadeIn>
         <h1 className="mt-8 text-2xl font-medium tracking-wide text-white underline underline-offset-4">
@@ -83,6 +107,16 @@ const Contact: NextPage = () => {
                 className="rounded-full bg-white p-2"
               />
             </a>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <h1 className="text-xl font-medium tracking-wide text-white underline underline-offset-4">
+            {t("download_cv")}
+          </h1>
+
+          <div className="mt-8 flex items-center justify-center space-x-4">
+            <CVDownload />
           </div>
         </div>
       </FadeIn>

@@ -9,5 +9,6 @@
   "send": "Send",
   "or": "Or send me an email from your preferred app",
   "connect": "Connect with me on",
-  "success": "Message sent"
+  "success": "Message sent",
+  "download_cv": "Download my CV"
 }

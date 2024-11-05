@@ -32,7 +32,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Theo Poette - Homepage</title>
-        <meta name="description" content="Theo Poette home website" />
+        <meta name="description" content="Theo Poette's personal website showcasing his work, projects, and contact information." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

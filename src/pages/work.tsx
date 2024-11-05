@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
 import FadeIn from "../components/FadeIn";
@@ -6,6 +6,7 @@ import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { Button } from "@/components/ui/button";
+import { NextSeo } from "next-seo";
 
 const Work: NextPage = () => {
   const { t } = useTranslation("work");
@@ -14,9 +15,43 @@ const Work: NextPage = () => {
     <>
       <Head>
         <title>Theo Poette - Work</title>
-        <meta name="description" content="Work experience" />
+        <meta name="description" content="Theo Poette's work experience" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NextSeo
+        title="Theo Poette - Work"
+        description="Learn about Theo Poette's work experience and professional background."
+        openGraph={{
+          title: "Theo Poette - Work",
+          description: "Learn about Theo Poette's work experience and professional background.",
+          images: [
+            {
+              url: "/nextraining.png",
+              width: 400,
+              height: 400,
+              alt: "Nextraining Logo",
+            },
+            {
+              url: "/bouge.png",
+              width: 600,
+              height: 400,
+              alt: "Bouge Logo",
+            },
+            {
+              url: "/lama.png",
+              width: 400,
+              height: 400,
+              alt: "Lamafactory Logo",
+            },
+            {
+              url: "/kbrw.png",
+              width: 600,
+              height: 600,
+              alt: "KBRW Logo",
+            },
+          ],
+        }}
+      />
       <FadeIn>
         <div className="container mx-auto h-full w-full">
           <div className="wrap relative h-full overflow-hidden p-1 py-8 sm:p-6">
@@ -183,9 +218,9 @@ const Work: NextPage = () => {
         <div className="mx-auto mt-8 flex w-fit flex-col items-center justify-center rounded-lg p-6">
           <p className="text-white">{t("free")}</p>
           <Button>
-          <Link href="/contact">
-            {t("contact")}
-          </Link>
+            <Link href="/contact">
+              {t("contact")}
+            </Link>
           </Button>
         </div>
       </FadeIn>

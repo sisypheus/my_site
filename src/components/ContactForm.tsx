@@ -25,8 +25,8 @@ const ContactForm = ({ setSuccess, setError }: Props) => {
       return;
     }
 
+
     console.log(captchaRef.current.getValue())
-    // request to message back-end
     setSuccess(t("success"));
     captchaRef.current.reset()
     reset()

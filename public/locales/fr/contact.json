@@ -9,5 +9,6 @@
   "send": "Envoyer",
   "or": "Ou envoyez moi un email directement",
   "connect": "Retrouvez-moi sur",
-  "success": "Message envoyé"
+  "success": "Message envoyé",
+  "download_cv": "Télécharger mon CV"
 }
